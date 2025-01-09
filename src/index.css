@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-body bg-background text-dark;
+  font-family: "Poppins", sans-serif;
+}
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Class to apply the fade-in effect */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+h1 {
+  font-size: clamp(2.5rem, 0.8696rem + 5.5652vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
