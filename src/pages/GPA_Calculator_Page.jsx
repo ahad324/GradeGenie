@@ -3,7 +3,7 @@ import SubjectForm from "../components/CalculatorComponents/SubjectForm";
 import ResultCard from "../components/CalculatorComponents/ResultCard";
 import { Helmet } from "react-helmet-async";
 
-const GPA_SGPA_Calculator_Page = () => {
+const GPA_Calculator_Page = () => {
   const [subjects, setSubjects] = useState([]);
   const [editingAssessment, setEditingAssessment] = useState(null);
 
@@ -276,4 +276,4 @@ const GPA_SGPA_Calculator_Page = () => {
   );
 };
 
-export default GPA_SGPA_Calculator_Page;
+export default GPA_Calculator_Page;

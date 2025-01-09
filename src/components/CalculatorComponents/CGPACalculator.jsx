@@ -74,7 +74,7 @@ const CGPACalculator = () => {
 
       <button
         onClick={addSemester}
-        className="flex items-center bg-primary text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition"
+        className="flex items-center bg-accent hover:bg-primary text-white px-6 py-3 rounded-full shadow-lg transition"
       >
         <FaPlusCircle className="mr-3" /> Add Semester
       </button>

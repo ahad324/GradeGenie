@@ -4,7 +4,6 @@
 
 body {
   @apply font-body bg-background text-dark;
-  font-family: "Poppins", sans-serif;
 }
 /* Define the fade-in animation */
 @keyframes fadeIn {

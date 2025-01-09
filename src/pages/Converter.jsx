@@ -38,12 +38,11 @@ const Converter = () => {
       </div>
 
       {/* Conversion Components */}
-      <section className="flex flex-wrap gap-8 mb-16">
+      <section className="flex flex-wrap gap-8 mb-16 border-b-4">
         <BinaryToAll />
         <OctalToAll />
         <DecimalToAll />
         <HexaToAll />
-        <tr className="h-1 bg-primary w-full " />
       </section>
       {/* Operations Components */}
       <section className="flex flex-wrap gap-8 mb-16">

@@ -37,7 +37,7 @@ const Home = () => {
 
         <div className="space-x-6 flex flex-col gap-5 md:flex-row">
           <Link
-            to="/gpa-sgpa-calculator"
+            to="/gpa-calculator"
             className="flex items-center justify-center bg-accent text-lightText px-6 py-3 rounded-lg shadow-strong hover:bg-primary transition gap-2"
           >
             <FaCalculator className="text-xl" />

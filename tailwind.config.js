@@ -7,16 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#4139e0",      // Deep Blue
-        secondary: "#dddbff",    // Bright Yellow
-        accent: "#443dff",       // Purple
-        background: "#fbfbfe",   // Light Gray
-        dark: "#050316",         // Dark Slate
-        lightText: "#F9FAFB",    // Light Text
+        primary: "#4139e0",
+        secondary: "#dddbff",
+        accent: "#443dff",
+        background: "#fbfbfe",
+        dark: "#050316",
+        lightText: "#F9FAFB",
       },
       fontFamily: {
-        body: ["Inter", "sans-serif"],
-        heading: ["Poppins", "sans-serif"],
+        body: ["Poppins", "sans-serif"],
       },
       boxShadow: {
         subtle: "0 4px 6px rgba(0, 0, 0, 0.1)",

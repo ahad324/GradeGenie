@@ -220,7 +220,7 @@ const SubjectForm = ({
       <div className="flex justify-end mt-8">
         <button
           type="submit"
-          className="flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all duration-200"
+          className="flex items-center px-6 py-3 bg-accent text-white font-semibold shadow-lg rounded-lg hover:bg-primary transition-all duration-200"
         >
           {isUpdating ? (
             <>

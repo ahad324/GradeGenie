@@ -9,7 +9,7 @@ const routes = [
   { url: "/", changefreq: "daily", priority: 1.0 },
   { url: "/about", changefreq: "weekly", priority: 0.8 },
   { url: "/contact", changefreq: "monthly", priority: 0.7 },
-  { url: "/gpa-sgpa-calculator", changefreq: "weekly", priority: 0.9 },
+  { url: "/gpa-calculator", changefreq: "weekly", priority: 0.9 },
   { url: "/cgpa-calculator", changefreq: "weekly", priority: 0.9 },
   { url: "/converter", changefreq: "weekly", priority: 0.9 },
 ];
