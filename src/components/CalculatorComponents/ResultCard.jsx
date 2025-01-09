@@ -78,9 +78,9 @@ const ResultCard = ({ subjects, onDeleteAssessment, setEditingAssessment }) => {
           {subjects.map((subject, index) => (
             <React.Fragment key={index}>
               <tr
-                className={`border-b-2 border- border-accent cursor-pointer transition ${
+                className={`border-b-2 border- border-dark cursor-pointer transition ${
                   expandedSubject === subject.name
-                    ? "bg-accent text-lightText"
+                    ? "bg-dark text-lightText"
                     : "hover:bg-background"
                 }`}
                 onClick={() => toggleExpand(subject.name)}
@@ -91,9 +91,7 @@ const ResultCard = ({ subjects, onDeleteAssessment, setEditingAssessment }) => {
                 <td className="p-3">{subject.GPA}</td>
                 <td className="p-3">{subject.creditHours}</td>
                 <td className="p-3">
-                  <button className="text-accent hover:underline mr-4 font-medium">
-                    Edit
-                  </button>
+                  <button className="text-accent mr-4 font-medium">Edit</button>
                 </td>
               </tr>
 

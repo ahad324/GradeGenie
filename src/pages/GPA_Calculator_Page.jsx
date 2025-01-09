@@ -2,11 +2,45 @@ import React, { useState, useEffect } from "react";
 import SubjectForm from "../components/CalculatorComponents/SubjectForm";
 import ResultCard from "../components/CalculatorComponents/ResultCard";
 import { Helmet } from "react-helmet-async";
+import Table from "../components/Table";
 
 const GPA_Calculator_Page = () => {
   const [subjects, setSubjects] = useState([]);
   const [editingAssessment, setEditingAssessment] = useState(null);
+  // Grade and GPA criteria
+  const gradeCriteria = {
+    title: "Grade Criteria",
+    headers: ["Percentage Range", "Grade"],
+    data: [
+      { range: "85% to 100%", grade: "A" },
+      { range: "80% to 84%", grade: "A-" },
+      { range: "75% to 79%", grade: "B+" },
+      { range: "71% to 74%", grade: "B" },
+      { range: "68% to 70%", grade: "B-" },
+      { range: "64% to 67%", grade: "C+" },
+      { range: "61% to 63%", grade: "C" },
+      { range: "58% to 60%", grade: "C-" },
+      { range: "54% to 57%", grade: "D+" },
+      { range: "50% to 53%", grade: "D" },
+      { range: "0% to 49%", grade: "F" },
+    ],
+  };
 
+  const gpaCriteria = {
+    title: "GPA Calculation Criteria",
+    headers: ["Percentage Range", "GPA"],
+    data: [
+      { range: "85% and above", gpa: "4.0" },
+      { range: "80% - 84%", gpa: "3.66" },
+      { range: "75% - 79%", gpa: "3.33" },
+      { range: "70% - 74%", gpa: "3.0" },
+      { range: "65% - 69%", gpa: "2.66" },
+      { range: "60% - 64%", gpa: "2.33" },
+      { range: "55% - 59%", gpa: "2.0" },
+      { range: "50% - 54%", gpa: "1.66" },
+      { range: "Below 50%", gpa: "0.0" },
+    ],
+  };
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem("GradeCalculator")) || [];
     setSubjects(savedData);
@@ -270,6 +304,17 @@ const GPA_Calculator_Page = () => {
           </p>
         </div>
       </div>
+      {/* Criteria Tables */}
+      <Table
+        title={gradeCriteria.title}
+        headers={gradeCriteria.headers}
+        data={gradeCriteria.data}
+      />
+      <Table
+        title={gpaCriteria.title}
+        headers={gpaCriteria.headers}
+        data={gpaCriteria.data}
+      />
     </div>
   );
 };

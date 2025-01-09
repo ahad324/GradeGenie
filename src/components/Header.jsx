@@ -56,12 +56,12 @@ const Header = () => {
                 </button>
 
                 {toolsDropdownOpen && (
-                  <div className="absolute top-10 left-0 px-1 py-1 bg-white shadow-lg rounded-md w-48 z-50">
+                  <div className="absolute top-10 left-0 bg-secondary shadow-lg rounded-md w-48 z-50 ">
                     {link.submenu.map((sublink, subIndex) => (
                       <Link
                         key={subIndex}
                         to={sublink.path}
-                        className="block px-3 py-2 hover:bg-gray-100 transition border-b-2"
+                        className="block px-3 py-2 hover:bg-gray-100 rounded-b-lg border-b border-dark transition"
                         onClick={() => setToolsDropdownOpen(false)}
                       >
                         {sublink.name}
@@ -117,12 +117,12 @@ const Header = () => {
                 </button>
 
                 {toolsDropdownOpen && (
-                  <div className="w-full bg-white shadow-lg rounded-md z-50">
+                  <div className="w-full bg-secondary shadow-lg rounded-md z-50">
                     {link.submenu.map((sublink, subIndex) => (
                       <Link
                         key={subIndex}
                         to={sublink.path}
-                        className="block px-6 py-3 hover:bg-gray-100 transition"
+                        className="block px-6 py-3 hover:bg-gray-100 border-b border-dark rounded-b-lg  transition"
                         onClick={toggleMenu}
                       >
                         {sublink.name}
