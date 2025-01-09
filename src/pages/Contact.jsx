@@ -63,7 +63,7 @@ const Contact = () => {
 
       {/* Page Header */}
       <header className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-primary mb-4">Contact Us</h1>
+        <h1 className="text-primary">Contact Us</h1>
         <p className="text-lg text-dark">
           Have questions or feedback? Reach out to us using the form below.
         </p>

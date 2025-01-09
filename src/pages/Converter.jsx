@@ -26,7 +26,7 @@ const Converter = () => {
 
       {/* Page Header */}
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-extrabold text-primary mb-4">
+        <h1 className="text-primary">
           Number System Conversion & Operations
         </h1>
         <p className="text-lg text-gray-600 leading-relaxed">

@@ -146,9 +146,7 @@ const GPA_Calculator_Page = () => {
 
       {/* Header Section */}
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-primary leading-tight">
-          GPA and SGPA Calculator
-        </h1>
+        <h1 className="text-primary">GPA and SGPA Calculator</h1>
         <p className="text-lg text-dark mt-6 max-w-3xl mx-auto">
           Calculate your GPA and SGPA quickly and accurately with GradeGenie.
           Add subjects, input assessments, and monitor your academic progress

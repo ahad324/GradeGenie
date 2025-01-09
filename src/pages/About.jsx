@@ -18,7 +18,7 @@ const About = () => {
       </Helmet>
       {/* Header Section */}
       <header className="text-center mb-12">
-        <h1 className="text-5xl font-extrabold text-primary mb-4">About Us</h1>
+        <h1 className="text-primary">About Us</h1>
         <p className="text-lg text-dark">
           Empowering students and educators with cutting-edge tools to achieve
           academic success.

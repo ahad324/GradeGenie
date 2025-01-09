@@ -31,9 +31,7 @@ const CGPACalculator = () => {
 
   return (
     <div className="bg-secondary p-8 rounded-lg shadow-2xl mt-12 max-w-3xl mx-auto">
-      <h2 className="text-4xl font-bold mb-6 text-center text-primary">
-        CGPA Calculator
-      </h2>
+      <h1 className="text-center text-primary">CGPA Calculator</h1>
       <p className="text-lg text-gray-600 mb-10 text-center">
         Enter your SGPA to compute your cumulative GPA accurately.
       </p>
