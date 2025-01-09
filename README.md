@@ -1,4 +1,4 @@
-<h1 style="margin: 0;"><img src="https://gradegenie.site/GradeGenius.png" alt="GradeGenie Logo" width="30" style="margin-right: 10px;"/> GradeGenie</h1>
+<h1 style="margin: 0;"><img src="https://gradegenie.site/logo.png" alt="GradeGenie Logo" width="30" style="margin-right: 10px;"/> GradeGenie</h1>
 
 Welcome to **GradeGenie**, your ultimate tool for calculating GPA, CGPA, SGPA, and more! Whether you're a student aiming for academic excellence or simply managing your grades, GradeGenie is here to make grade management easy and efficient.
 <br><br>
