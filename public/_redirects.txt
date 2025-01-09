@@ -1,1 +1,2 @@
 /* /index.html 200
+https://gradegenie.site/* https://www.gradegenie.site/:splat 301!
