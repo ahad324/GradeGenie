@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
   FaCalculator,
@@ -35,20 +36,20 @@ const Home = () => {
         </p>
 
         <div className="space-x-6 flex flex-col gap-5 md:flex-row">
-          <a
-            href="/gpa-sgpa-calculator"
+          <Link
+            to="/gpa-sgpa-calculator"
             className="flex items-center justify-center bg-accent text-lightText px-6 py-3 rounded-lg shadow-strong hover:bg-primary transition gap-2"
           >
             <FaCalculator className="text-xl" />
             Start Calculating Now
-          </a>
-          <a
-            href="/about"
+          </Link>
+          <Link
+            to="/about"
             className="flex items-center justify-center border border-primary px-6 py-3 rounded-lg hover:text-lightText hover:bg-primary transition gap-2"
           >
             <FaInfoCircle className="text-xl" />
             Learn More
-          </a>
+          </Link>
         </div>
       </section>
 

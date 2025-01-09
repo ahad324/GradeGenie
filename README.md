@@ -19,17 +19,6 @@ Welcome to **GradeGenie**, your ultimate tool for calculating GPA, CGPA, SGPA, a
 
 Explore GradeGenie and streamline your grade management! Visit the live site [here](https://ahad324.github.io/MarksCalculator/).
 
-## 🔧 Getting Started
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/ahad324/MarksCalculator.git
-   cd MarksCalculator
-   ```
-- **👩‍💻 Now just run the `index.html` file**
-
 ## 💬 Feedback and Contributions
 
 I’d love to hear from you! If you have any feedback or suggestions, please open an issue or submit a pull request. Your stars ⭐ and contributions help me keep improving and maintaining this project! 🙌
-

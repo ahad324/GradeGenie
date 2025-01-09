@@ -14,7 +14,7 @@ const Header = () => {
     {
       name: "Tools",
       submenu: [
-        { name: "GPA/SGPA Calculator", path: "/gpa-sgpa-calculator" },
+        { name: "GPA Calculator", path: "/gpa-sgpa-calculator" },
         { name: "CGPA Calculator", path: "/cgpa-calculator" },
         { name: "Converter", path: "/converter" },
       ],
