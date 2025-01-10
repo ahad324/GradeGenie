@@ -25,7 +25,7 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="text-dark min-h-[70dvh] flex flex-col justify-center items-center text-center">
-        <h1 className="text-accent">
+        <h1 className="text-accent w-full lg:w-1/2">
           Master Your Grades with Our Free GPA, CGPA, and SGPA Calculator
         </h1>
         <p className="text-lg mb-8 max-w-3xl text-gray-700">
