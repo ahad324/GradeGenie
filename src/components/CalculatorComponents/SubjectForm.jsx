@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaPlus, FaSyncAlt } from "react-icons/fa";
+import { FaPlusCircle, FaSyncAlt } from "react-icons/fa";
 
 const SubjectForm = ({
   onAddOrUpdate,
@@ -228,7 +228,7 @@ const SubjectForm = ({
             </>
           ) : (
             <>
-              <FaPlus className="mr-2" /> Add Subject
+              <FaPlusCircle className="mr-2" /> Add Subject
             </>
           )}
         </button>
