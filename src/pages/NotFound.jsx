@@ -6,7 +6,7 @@ import NotFoundImg from "/NotFound.svg"; // Ensure the path to the image is corr
 
 const NotFound = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-center px-6 py-4">
+    <div className="fade-in flex flex-col items-center justify-center min-h-screen bg-gray-50 text-center px-6 py-4">
       {/* SEO Metadata */}
       <Helmet>
         <title>404 - Page Not Found | GradeGenie</title>
@@ -42,7 +42,7 @@ const NotFound = () => {
       {/* Call to Action with Icon */}
       <Link
         to="/"
-        className="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-primary rounded-lg shadow hover:bg-accent transition duration-200"
+        className="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-accent rounded-lg shadow hover:bg-primary transition duration-200"
       >
         <FaArrowLeft className="mr-3" />
         Back to Home
