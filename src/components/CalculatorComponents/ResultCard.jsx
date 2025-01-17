@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import AssessmentTable from "./AssessmentTable";
+import { FaTrashCan, FaPen } from "react-icons/fa6";
 
-const ResultCard = ({ subjects, onDeleteAssessment, setEditingAssessment }) => {
+const ResultCard = ({
+  subjects,
+  onDeleteAssessment,
+  setEditingAssessment,
+  deleteTable,
+}) => {
   const [expandedSubject, setExpandedSubject] = useState(null);
 
   const toggleExpand = (subjectName) => {
@@ -60,10 +66,25 @@ const ResultCard = ({ subjects, onDeleteAssessment, setEditingAssessment }) => {
   const percentage = calculatePercentage();
   const grade = calculateGrade(percentage);
 
+  const handleDeleteTable = () => {
+    deleteTable();
+  };
+
   return (
     <div className="mt-12 bg-secondary overflow-x-scroll md:overflow-auto p-6 rounded-lg shadow-2xl">
-      <h2 className="text-4xl mb-8 text-accent font-semibold">Result Card</h2>
-      <table className="w-full border-collapse">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 mb-8">
+        <h2 className="text-4xl text-accent font-semibold">Result Card</h2>
+        {subjects.length > 0 && (
+          <button
+            type="submit"
+            className="flex items-center px-4 py-3 bg-red-500 hover:bg-red-600 hover:scale-110 text-white text-sm font-semibold shadow-lg rounded-lg transition-all duration-200"
+            onClick={handleDeleteTable}
+          >
+            <FaTrashCan className="mr-2 size-4" /> Delete Table
+          </button>
+        )}
+      </div>
+      <table className="w-full border-collapse text-center">
         <thead className="bg-accent text-white text-xs md:text-base">
           <tr>
             <th className="p-3">Subject</th>
@@ -78,7 +99,7 @@ const ResultCard = ({ subjects, onDeleteAssessment, setEditingAssessment }) => {
           {subjects.map((subject, index) => (
             <React.Fragment key={index}>
               <tr
-                className={`border-b-2 border- border-dark cursor-pointer transition ${
+                className={`border-b-2 border-dark cursor-pointer transition ${
                   expandedSubject === subject.name
                     ? "bg-dark text-lightText"
                     : "hover:bg-background"
@@ -91,7 +112,9 @@ const ResultCard = ({ subjects, onDeleteAssessment, setEditingAssessment }) => {
                 <td className="p-3">{subject.GPA}</td>
                 <td className="p-3">{subject.creditHours}</td>
                 <td className="p-3">
-                  <button className="text-accent mr-4 font-medium">Edit</button>
+                  <button className="text-accent font-medium hover:text-primary  hover:scale-110">
+                    <FaPen />
+                  </button>
                 </td>
               </tr>
 
@@ -113,7 +136,7 @@ const ResultCard = ({ subjects, onDeleteAssessment, setEditingAssessment }) => {
       </table>
 
       {/* Display SGPA, Percentage, and Grade Below the Table */}
-      <div className="text-center mt-12 md:text-3xl font-semibold">
+      <div className="text-2xl text-center mt-12 md:text-3xl font-semibold">
         <h3 className="mb-3">
           SGPA: <span className="text-accent">{calculateSGPA()}</span>
         </h3>

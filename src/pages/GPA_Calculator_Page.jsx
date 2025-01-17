@@ -155,6 +155,11 @@ const GPA_Calculator_Page = () => {
     else return "0.00";
   };
 
+  const handleDeleteTable = () => {
+    localStorage.removeItem("GradeCalculator");
+    setSubjects([]);
+  };
+
   return (
     <div className="fade-in container mx-auto px-4 py-8">
       <Helmet>
@@ -210,6 +215,7 @@ const GPA_Calculator_Page = () => {
           subjects={subjects}
           onDeleteAssessment={handleDeleteAssessment}
           setEditingAssessment={setEditingAssessment}
+          deleteTable={handleDeleteTable}
         />
       </div>
 

@@ -139,9 +139,6 @@ const SubjectForm = ({
         </div>
       </div>
 
-      {/* Divider */}
-      <hr className="border-t border-gray-300 my-6" />
-
       {/* Lower Part: Assessments */}
       <div>
         <h3 className="text-2xl font-bold mb-6 text-primary">Assessments</h3>
