@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gradegenie.site",
+  "homepage": "https://gradegenie.netlify.app",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node generate-sitemap.cjs",

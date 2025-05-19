@@ -2,7 +2,7 @@ const { SitemapStream, streamToPromise } = require("sitemap");
 const { createWriteStream } = require("fs");
 const path = require("path");
 
-const publicUrl = "https://gradegenie.site"; // Replace with your domain
+const publicUrl = "https://gradegenie.netlify.app"; // Replace with your domain
 
 // Define your routes
 const routes = [

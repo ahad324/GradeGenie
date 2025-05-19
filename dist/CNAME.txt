@@ -1,1 +1,1 @@
-gradegenie.site
+gradegenie.netlify.app
