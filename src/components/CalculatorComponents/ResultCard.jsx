@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AssessmentTable from "./AssessmentTable";
-import { FaTrashCan, FaPen } from "react-icons/fa6";
+import { FaTrashCan, FaPen, FaCopy, FaCheck } from "react-icons/fa6";
 
 const ResultCard = ({
   subjects,
@@ -9,9 +9,18 @@ const ResultCard = ({
   deleteTable,
 }) => {
   const [expandedSubject, setExpandedSubject] = useState(null);
+  const [copiedSubject, setCopiedSubject] = useState(null);
 
   const toggleExpand = (subjectName) => {
     setExpandedSubject(expandedSubject === subjectName ? null : subjectName);
+  };
+
+  // Function to handle copying subject name
+  const handleCopySubject = (subjectName) => {
+    navigator.clipboard.writeText(subjectName).then(() => {
+      setCopiedSubject(subjectName);
+      setTimeout(() => setCopiedSubject(null), 1000); // Reset after 1 second
+    });
   };
 
   // Calculate SGPA
@@ -106,7 +115,25 @@ const ResultCard = ({
                 }`}
                 onClick={() => toggleExpand(subject.name)}
               >
-                <td className="p-3">{subject.name}</td>
+                <td className="p-3">
+                  <div className="flex items-center justify-center space-x-2">
+                    <span>{subject.name}</span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent row click from triggering
+                        handleCopySubject(subject.name);
+                      }}
+                      className="text-accent hover:text-primary hover:scale-110"
+                      title="Copy Subject Name"
+                    >
+                      {copiedSubject === subject.name ? (
+                        <FaCheck className="text-green-500" />
+                      ) : (
+                        <FaCopy />
+                      )}
+                    </button>
+                  </div>
+                </td>
                 <td className="p-3">{subject.totalObtained}</td>
                 <td className="p-3">{subject.totalMax}</td>
                 <td className="p-3">{subject.GPA}</td>

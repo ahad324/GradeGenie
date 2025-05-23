@@ -1,5 +1,5 @@
-import React from "react";
-import { FaTrashCan, FaPen } from "react-icons/fa6";
+import React, { useState } from "react";
+import { FaTrashCan, FaPen, FaCopy, FaCheck } from "react-icons/fa6";
 
 const AssessmentTable = ({
   assessments,
@@ -7,6 +7,15 @@ const AssessmentTable = ({
   onDeleteAssessment,
   setEditingAssessment,
 }) => {
+  const [copiedAssessment, setCopiedAssessment] = useState(null);
+
+  const handleCopyAssessment = (assessmentName) => {
+    navigator.clipboard.writeText(assessmentName).then(() => {
+      setCopiedAssessment(assessmentName);
+      setTimeout(() => setCopiedAssessment(null), 1000); // Reset after 1 second
+    });
+  };
+
   return (
     <div className="overflow-x-auto px-6">
       <table className="w-full border-2 border-gray-300 rounded-lg overflow-hidden text-center">
@@ -26,7 +35,22 @@ const AssessmentTable = ({
               className="border-b-4 border-l-4 border-r-4 border-accent"
             >
               <td className="p-2 border-r border-primary">
-                {assessment.assessmentName}
+                <div className="flex items-center justify-center space-x-2">
+                  <span>{assessment.assessmentName}</span>
+                  <button
+                    onClick={() =>
+                      handleCopyAssessment(assessment.assessmentName)
+                    }
+                    className="text-accent hover:text-primary hover:scale-110"
+                    title="Copy Assessment Name"
+                  >
+                    {copiedAssessment === assessment.assessmentName ? (
+                      <FaCheck className="text-green-500" />
+                    ) : (
+                      <FaCopy />
+                    )}
+                  </button>
+                </div>
               </td>
               <td className="p-2 border-r border-primary">
                 {assessment.obtainedMarks}
