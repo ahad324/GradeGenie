@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import AssessmentTable from "./AssessmentTable";
 import { FaTrashCan, FaPen, FaCopy, FaCheck } from "react-icons/fa6";
+import AssessmentTable from "./AssessmentTable";
+import ConfirmDialog from "../ConfirmDialog";
 
 const ResultCard = ({
   subjects,
@@ -10,6 +11,7 @@ const ResultCard = ({
 }) => {
   const [expandedSubject, setExpandedSubject] = useState(null);
   const [copiedSubject, setCopiedSubject] = useState(null);
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
 
   const toggleExpand = (subjectName) => {
     setExpandedSubject(expandedSubject === subjectName ? null : subjectName);
@@ -76,7 +78,16 @@ const ResultCard = ({
   const grade = calculateGrade(percentage);
 
   const handleDeleteTable = () => {
+    setShowConfirmDialog(true);
+  };
+
+  const confirmDelete = () => {
     deleteTable();
+    setShowConfirmDialog(false);
+  };
+
+  const cancelDelete = () => {
+    setShowConfirmDialog(false);
   };
 
   return (
@@ -85,7 +96,7 @@ const ResultCard = ({
         <h2 className="text-4xl text-accent font-semibold">Result Card</h2>
         {subjects.length > 0 && (
           <button
-            type="submit"
+            type="button"
             className="flex items-center px-4 py-3 bg-red-500 hover:bg-red-600 hover:scale-110 text-white text-sm font-semibold shadow-lg rounded-lg transition-all duration-200"
             onClick={handleDeleteTable}
           >
@@ -161,6 +172,13 @@ const ResultCard = ({
           ))}
         </tbody>
       </table>
+      <ConfirmDialog
+        isOpen={showConfirmDialog}
+        onConfirm={confirmDelete}
+        onCancel={cancelDelete}
+        title="Delete Result Table?"
+        message="Are you sure you want to delete the entire result table? This action cannot be undone."
+      />
 
       {/* Display SGPA, Percentage, and Grade Below the Table */}
       <div className="text-2xl text-center mt-12 md:text-3xl font-semibold">
